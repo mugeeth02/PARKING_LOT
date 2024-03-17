@@ -2,7 +2,8 @@ package services;
 
 import dtos.IssueTicketRequest;
 import exceptions.GateNotFoundException;
-import exceptions.parkingLotNotFoundException;
+import exceptions.ParkingLotFullException;
+import exceptions.ParkingLotNotFoundException;
 import models.*;
 import repositories.GateRepository;
 import repositories.ParkingLotRepository;
@@ -12,7 +13,6 @@ import strategies.ParkingPlaceAllotmentStrategy;
 
 import java.util.Date;
 import java.util.UUID;
-import java.util.function.LongToDoubleFunction;
 
 public class TicketService {
 
@@ -30,7 +30,7 @@ public class TicketService {
     }
 
     public Ticket issueTicket(IssueTicketRequest request) throws GateNotFoundException,
-            parkingLotNotFoundException {
+            ParkingLotNotFoundException, ParkingLotFullException {
 /*
         1. SET TIME
         2. GET VEHICLE AMD GATE DETAILS
@@ -64,7 +64,8 @@ public class TicketService {
         ParkingPlaceAllotmentStrategy allotmentStrategy = request.getParkingPlaceAllotmentStrategy();
 
 
-        ParkingSpot parkingSpot = allotmentStrategy.getParkingSpot(request.getVehicleType(), request.getParkingLotId());
+        ParkingSpot parkingSpot =
+                allotmentStrategy.getParkingSpot(request.getVehicleType(), parkingLot);
 
         ticket.setParklingSpot(parkingSpot);
         ticket.setNumber(request.getVehicleNumber()+ UUID.randomUUID() );

@@ -10,6 +10,16 @@ public class IssueTicketRequest {
     private String Owner;
     private Long gateId;
     private Long parkingLotId;
+    private ParkingPlaceAllotmentStrategy parkingPlaceAllotmentStrategy;
+
+    public IssueTicketRequest(VehicleType vehicleType, String vehicleNumber, String owner, Long gateId, Long parkingLotId, ParkingPlaceAllotmentStrategy parkingPlaceAllotmentStrategy) {
+        this.vehicleType = vehicleType;
+        this.vehicleNumber = vehicleNumber;
+        Owner = owner;
+        this.gateId = gateId;
+        this.parkingLotId = parkingLotId;
+        this.parkingPlaceAllotmentStrategy = parkingPlaceAllotmentStrategy;
+    }
 
     public ParkingPlaceAllotmentStrategy getParkingPlaceAllotmentStrategy() {
         return parkingPlaceAllotmentStrategy;
@@ -19,7 +29,7 @@ public class IssueTicketRequest {
         this.parkingPlaceAllotmentStrategy = parkingPlaceAllotmentStrategy;
     }
 
-    private ParkingPlaceAllotmentStrategy parkingPlaceAllotmentStrategy;
+
 
     public VehicleType getVehicleType() {
         return vehicleType;

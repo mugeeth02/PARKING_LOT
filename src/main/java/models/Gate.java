@@ -12,11 +12,11 @@ public class Gate {
         this.gateStatus = gateStatus;
     }
 
-    public java.lang.Long getNumber() {
+    public Long getNumber() {
         return number;
     }
 
-    public void setNumber(java.lang.Long number) {
+    public void setNumber(Long number) {
         this.number = number;
     }
 

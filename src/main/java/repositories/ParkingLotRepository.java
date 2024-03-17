@@ -1,6 +1,6 @@
 package repositories;
 
-import exceptions.parkingLotNotFoundException;
+import exceptions.ParkingLotNotFoundException;
 import models.ParkingLot;
 
 import java.util.HashMap;
@@ -10,7 +10,9 @@ public class ParkingLotRepository {
 
     Map<Long, ParkingLot> parkingLotMap = new HashMap<>();
 
-    public Map<Long, ParkingLot> getParkingLotMap() {
+
+
+    public static Map<Long, ParkingLot> getParkingLotMap() {
         return parkingLotMap;
     }
 
@@ -18,10 +20,10 @@ public class ParkingLotRepository {
         this.parkingLotMap = parkingLotMap;
     }
 
-    public ParkingLot getparkingLotById(Long id) throws parkingLotNotFoundException {
-        if(parkingLotMap.containsKey(id)){
-            return parkingLotMap.get(id);
+    public ParkingLot getparkingLotById(Long parkingLotId) throws ParkingLotNotFoundException {
+        if(parkingLotMap.containsKey(parkingLotId)){
+            return parkingLotMap.get(parkingLotId);
         }
-        throw new parkingLotNotFoundException();
+        throw new ParkingLotNotFoundException();
     }
 }

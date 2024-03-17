@@ -23,4 +23,6 @@ public class GateRepository {
         }
         throw new GateNotFoundException();
     }
+
+
 }
