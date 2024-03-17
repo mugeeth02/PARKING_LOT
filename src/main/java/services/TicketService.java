@@ -21,6 +21,14 @@ public class TicketService {
 
     private ParkingLotRepository parkingLotRepository;
     private TicketRepository ticketRepository;
+
+    public TicketService(GateRepository gateRepository, VehicleRepostitory vehicleRepostitory, ParkingLotRepository parkingLotRepository, TicketRepository ticketRepository) {
+        this.gateRepository = gateRepository;
+        this.vehicleRepostitory = vehicleRepostitory;
+        this.parkingLotRepository = parkingLotRepository;
+        this.ticketRepository = ticketRepository;
+    }
+
     public Ticket issueTicket(IssueTicketRequest request) throws GateNotFoundException,
             parkingLotNotFoundException {
 /*

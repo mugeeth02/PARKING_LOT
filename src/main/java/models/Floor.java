@@ -6,6 +6,10 @@ public class Floor {
     private int floorNumber;
     private List<ParkingSpot> parkingSpots;
 
+    public Floor(int floorNumber) {
+        this.floorNumber = floorNumber;
+    }
+
     public int getFloorNumber() {
         return floorNumber;
     }

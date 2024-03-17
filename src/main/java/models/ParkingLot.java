@@ -5,12 +5,26 @@ import java.util.List;
 
 
 
-
 public class ParkingLot {
-
+    private long id;
     private List<Floor> floors;
     private List<Gate> gates;
     private ParkingStatus parkingStatus;
+
+    public ParkingLot(long id, List<Floor> floors, List<Gate> gates, ParkingStatus parkingStatus) {
+        this.id = id;
+        this.floors = floors;
+        this.gates = gates;
+        this.parkingStatus = parkingStatus;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public List<Floor> getFloors() {
         return floors;

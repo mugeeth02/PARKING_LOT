@@ -11,6 +11,11 @@ import java.sql.SQLOutput;
 
 public class TicketController {
     private TicketService ticketService;
+
+    public TicketController(TicketService ticketService) {
+        this.ticketService = ticketService;
+    }
+
     private IssueTicketResponse issueTicket(IssueTicketRequest request) {
         Ticket ticket = null;
         try {
