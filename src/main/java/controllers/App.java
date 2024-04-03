@@ -1,7 +1,5 @@
 package controllers;
-// wksnalk
-// prithiviii
-//mugeeth
+// wksnalkgit
 import dtos.IssueTicketRequest;
 import dtos.IssueTicketResponse;
 import models.*;
@@ -46,7 +44,7 @@ public class App {
                         parkingLotRepository,ticketRepository);
         TicketController ticketController = new TicketController(ticketService);
 
-        new IssueTicketRequest(VehicleType.FOUR_WHEELER,"TN-09","MUGEETH",1l,1l,new SimpleParkingSpotAllotmentStrategy());
+        IssueTicketRequest issueTicketRequest =  new IssueTicketRequest(VehicleType.FOUR_WHEELER,"TN-09","MUGEETH",1l,1l,new SimpleParkingSpotAllotmentStrategy());
         IssueTicketResponse ticketResponse = ticketController.issueTicket(issueTicketRequest);
         System.out.println(ticketResponse);
     }

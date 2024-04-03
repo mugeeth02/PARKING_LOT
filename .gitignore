@@ -1,3 +1,4 @@
+PARKING_LOT
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/

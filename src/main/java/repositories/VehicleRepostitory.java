@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class VehicleRepostitory {
 
-    private Map<String, Vehicle> vehicleMap = new HashMap<>();
+    private static Map<String, Vehicle> vehicleMap = new HashMap<>();
 
     public Map<String, Vehicle> getVehicleMap() {
         return vehicleMap;

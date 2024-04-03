@@ -5,7 +5,7 @@ import models.*;
 
 public class SimpleParkingSpotAllotmentStrategy implements ParkingPlaceAllotmentStrategy{
 
-    public ParkingSpot getParkingSpot(VehicleType vehicle, ParkingLot parkingLot) throws ParkingLotFullException {
+    public ParkingSpot getParkingSpot(VehicleType vehicleType, ParkingLot parkingLot) throws ParkingLotFullException {
          /*
       1. Find the parking spot
       2. Get all the floors of the parking lot

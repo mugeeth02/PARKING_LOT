@@ -1,5 +1,6 @@
 package controllers;
 
+import dtos.IssueTicketRequest;
 import exceptions.GateNotFoundException;
 import exceptions.ParkingLotFullException;
 import exceptions.ParkingLotNotFoundException;
@@ -14,7 +15,7 @@ public class TicketController {
         this.ticketService = ticketService;
     }
 
-    private IssueTicketResponse issueTicket() {
+    public IssueTicketResponse issueTicket(IssueTicketRequest request) {
         Ticket ticket = null;
         try {
             ticket = ticketService.issueTicket(request);

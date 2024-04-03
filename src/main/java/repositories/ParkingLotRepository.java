@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class ParkingLotRepository {
 
-    Map<Long, ParkingLot> parkingLotMap = new HashMap<>();
+    static Map<Long, ParkingLot> parkingLotMap = new HashMap<>();
 
 
 

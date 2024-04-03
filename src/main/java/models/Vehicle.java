@@ -5,6 +5,9 @@ public class Vehicle {
     private VehicleType type;
     private String ownerName;
 
+    public Vehicle(String vehicleNumber, VehicleType vehicleType, String owner) {
+    }
+
     public String getNumber() {
         return number;
     }
